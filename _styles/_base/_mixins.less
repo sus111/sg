@@ -1,0 +1,45 @@
+// breakpoints
+
+@mobile: 480px;
+@tablet: 560px;
+@desktop: 768px;
+@xl-desktop: 1025px;
+
+.mq-mobile(@rules) {
+  @media only screen and (min-width: @mobile) {
+    @rules();
+  }
+}
+
+.mq-tablet(@rules) {
+  @media only screen and (min-width: @tablet) {
+    @rules();
+  }
+}
+
+.mq-desktop(@rules) {
+  @media only screen and (min-width: @desktop) {
+    @rules();
+  }
+}
+
+.mq-xl-desktop(@rules) {
+  @media only screen and (min-width: @xl-desktop) {
+    @rules();
+  }
+}
+
+// grid
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 16px;
+
+  .mq-xl-desktop({
+    max-width: 1025px;
+    height: 100vh;
+    align-content: center;
+    margin: 0 auto;
+  });
+}

@@ -1,0 +1,58 @@
+.about {
+  .grid;
+
+  &__image-wrapper {
+    grid-column: 1 / span 5;
+    overflow-x: hidden;
+
+    .mq-xl-desktop({
+      overflow-x: visible;
+    });
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__info {
+    grid-column: 6 / span 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__header {
+    .heading;
+    background-color: @color-white;
+
+    .mq-xl-desktop({
+      margin-left: -190px;
+      padding: 16px 18px;
+      margin-top: 40px;
+    });
+  }
+
+  &__description {
+    .body-large;
+  }
+
+  &__label {
+    .label;
+    background-color: @teal;
+    display: inline-block;
+    padding: 4px 6px;
+    width: 78px;
+  }
+
+  &__projects {
+  .body-large;
+
+    li {
+      padding: 6px 0;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '_colors';
+
+@path: '../../assets/fonts';
+
+@font-face {
+  font-family: 'Barlow-SemiBold';
+  src: url('@{path}/Barlow-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('@{path}/Barlow-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('@{path}/Barlow-SemiBold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('@{path}/Barlow-SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('@{path}/Barlow-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('@{path}/Barlow-SemiBold.svg#Barlow-Regular') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('@{path}/ProximaNova-Bold.eot'); /* IE9 Compat Modes */
+  src: url('@{path}/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('@{path}/ProximaNova-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('@{path}/ProximaNova-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('@{path}/ProximaNova-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('@{path}/ProximaNova-Bold.svg#Barlow-Regular') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('@{path}/ProximaNova-Regular.eot'); /* IE9 Compat Modes */
+  src: url('@{path}/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('@{path}/ProximaNova-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('@{path}/ProximaNova-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('@{path}/ProximaNova-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('@{path}/ProximaNova-Regular.svg#Barlow-Regular') format('svg'); /* Legacy iOS */
+}
+
+.heading-font {
+  font-family: 'Barlow-SemiBold', Helvetica, sans-serif;
+}
+
+.body-font {
+  font-family: 'ProximaNova-Regular', Helvetica, sans-serif;
+}
+
+.body-font-bold {
+  font-family: 'ProximaNova-Bold', Helvetica, sans-serif;
+}
+
+.heading {
+  .heading-font;
+  color: @almost-black;
+  font-size: 34px;
+
+  .mq-tablet({
+    font-size: 100px;
+  });
+}
+
+.body-large {
+  .body-font;
+  color: @almost-black;
+  font-size: 16px;
+
+  .mq-tablet({
+    font-size: 24px;
+  });
+}
+
+.label {
+  .body-font;
+  color: @color-white;
+  text-transform: uppercase;
+  font-size: 16px;
+}
