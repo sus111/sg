@@ -48,25 +48,48 @@
   .heading-font;
   color: @almost-black;
   font-size: 34px;
+  background-color: @color-white;
+  padding: 2px 8px;
+  display: inline-block;
+  margin-bottom: 22px;
 
-  .mq-tablet({
+  .mq-desktop({
+    font-size: 82px;
+    padding: 0;
+  });
+
+  .mq-xl-desktop({
     font-size: 100px;
+  });
+}
+
+.body-copy {
+  .body-font;
+  color: @almost-black;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 36px;
+
+  .mq-desktop({
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 0;
+  });
+
+  .mq-xl-desktop({
+    font-size: 24px;
+    line-height: 30px;
   });
 }
 
 .body-large {
   .body-font;
   color: @almost-black;
-  font-size: 16px;
-
-  .mq-tablet({
-    font-size: 24px;
-  });
+  font-size: 24px;
 }
 
-.label {
-  .body-font;
-  color: @color-white;
-  text-transform: uppercase;
-  font-size: 16px;
+.body-bold {
+  .body-font-bold;
+  color: @almost-black;
+  font-size: 24px;
 }

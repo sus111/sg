@@ -1,9 +1,29 @@
 .about {
   .grid;
+  grid-template-rows: 140px auto;
+  margin-bottom: 65px;
+
+  .mq-tablet({
+    grid-template-rows: 200px auto;
+  });
+
+  .mq-desktop({
+    margin-bottom: 0;
+    grid-template-rows: auto;
+  });
 
   &__image-wrapper {
-    grid-column: 1 / span 5;
-    overflow-x: hidden;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+    overflow-y: hidden;
+    margin-top: -45%;
+
+    .mq-desktop({
+      grid-column: 1 / span 5;
+      overflow-x: hidden;
+      overflow-y: visible;
+      margin-top: 0;
+    });
 
     .mq-xl-desktop({
       overflow-x: visible;
@@ -15,46 +35,64 @@
   }
 
   &__info {
-    grid-column: 6 / span 7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    .info;
+    grid-row: 2 / span 1;
+
+    .mq-desktop({
+      grid-column: 6 / span 7;
+      grid-row: 1 / span 1;
+    });
   }
 
   &__header {
     .heading;
-    background-color: @color-white;
+    width: 214px;
+    margin: -28px 0 22px;
 
     .mq-desktop({
       z-index: 1;
+      margin: 40px 0 0 -150px;
+      width: auto;
+      padding: 12px 14px;
+    });
+
+    .mq-xl-desktop {
       margin-left: -190px;
       padding: 16px 18px;
-      margin-top: 40px;
-      max-width: 630px;
-    });
+    }
   }
 
   &__description {
-    .body-large;
+    .body-copy;
   }
 
   &__label {
     .label;
-    background-color: @teal;
-    display: inline-block;
-    padding: 4px 6px;
-    width: 78px;
+    width: 57px;
+    margin-bottom: 20px;
+
+    .mq-desktop({
+      width: 78px;
+      margin-bottom: 0;
+    });
   }
 
   &__projects {
-  .body-large;
-
     li {
-      padding: 6px 0;
+      .list;
+      background-color: white;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
+      background-image: url('../../assets/images/download-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: 95% 46%;
+      padding: 10px 36px 10px 10px;
 
-      &:last-of-type {
-        padding-bottom: 0;
-      }
+      .mq-desktop({
+        background-color: transparent;
+        box-shadow: none;
+        background-image: none;
+        padding: 10px 0;
+      });
     }
   }
 }
